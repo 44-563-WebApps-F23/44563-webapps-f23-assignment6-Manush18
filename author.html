@@ -41,11 +41,32 @@ function checkAuthor (){
     
 
 }
+
+
+useImage = 1;
+
+function selectImage() {
+            switch (useImage) {
+                case 1:
+                    document.getElementById('mycity').src ="Amaravathi.jpg";
+                    useImage = 2;
+                    break;
+                case 2:
+                    document.getElementById('mycity').src ="Kolkata.jpg";
+                    useImage = 3;
+                    break;
+                case 3:
+                    document.getElementById('mycity').src ="Chhattisgarh.jpg";
+                    useImage = 1;
+                    break;
+                default:
+                    break;
+            }
+        }
+  
 </script>
 <div>
-    <img class="img-thumbnail" src="Amaravathi.jpg"  alt="Amaravathi"  height="100" width="100" onclick="SelectImage()">
+     <img id="mycity" src="Amaravathi.jpg" height="100" width="100" onclick="selectImage()">
 </div>
-  
-
 </body>
 </html>
