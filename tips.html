@@ -13,7 +13,8 @@
 <h2>Manush Kumar Kachakayala tip amounts</h2>
 
 <form>
-    <label for="form1actualAmount">Enter actual amount </label>
+    <label for="form1actualAmount">Enter
+        base amount </label>
     <input type="number" id="form1actualAmount" name="form1_actualAmount" value="50"><br><br>
 
     <label for="form1tipPercent">Enter the tip percent </label>
@@ -35,8 +36,9 @@
     <label for="calcMult">mult</label><br>
 </form>
 
-  <p id="operation_Result"></p>
-<!-- ------------------------------------------------------------------------------------------- -->
+  <p id="CalcResult"></p>
+
+
 <script> 
 
 function tips() {
@@ -62,26 +64,26 @@ function chooseOp() {
         
         const operation = document.querySelector('input[name="operation"]:checked').value;
         
-        const actual1 = parseFloat(document.getElementById('form1_actualAmount').value);
+        const actual1 = parseFloat(document.getElementById('form1actualAmount').value);
         const tip1 = parseFloat(document.getElementById('form1tipPercent').value);
         
-        let calcResult;
+        let OpResult;
 
         switch (operation) {
 		        case "sum":
-                    calcResult = `Sum of ${actual1} and ${tip1} is ${actual1 + tip1}`;
+                OpResult = `Sum of ${actual1} and ${tip1} is ${actual1 + tip1}`;
                     break;
                 case "difference":
-                    calcResult = `Difference between ${actual1} and ${tip1} is ${actual1 - tip1}`;
+                OpResult = `Difference between ${actual1} and ${tip1} is ${actual1 - tip1}`;
                     break;
                 case "product":
-                    calcResult = `Product of ${actual1} and ${tip1} is ${actual1 * tip1}`;
+                OpResult = `Product of ${actual1} and ${tip1} is ${actual1 * tip1}`;
                     break;
                 default:
-                    calcResult = "Please select Either Sum or Difference or Multiplication";
+                OpResult = "Please select Either Sum or Difference or Multiplication";
             }
 
-            document.getElementById('operation_Result').textContent = `${calcResult}`;
+            document.getElementById('CalcResult').textContent = `${OpResult}`;
     }
 </script>
 

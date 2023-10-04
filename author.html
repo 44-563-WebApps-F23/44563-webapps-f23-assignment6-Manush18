@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Welcometo Webapps repos</title>
+        <title>Welcome to Webapps repos</title>
+
     </head>
  
 <body>
@@ -49,15 +50,15 @@ function selectImage() {
             switch (useImage) {
                 case 1:
                     document.getElementById('mycity').src ="Amaravathi.jpg";
-                    useImage = 1;
+                    useImage = 2;
                     break;
                 case 2:
-                    document.getElementById('mycity').src ="Kolkata.jpg";
+                    document.getElementById('mycity').src ="Chhattisgarh.jpg";
                     useImage = 3;
                     break;
                 case 3:
-                    document.getElementById('mycity').src ="Chhattisgarh.jpg";
-                    useImage = 2;
+                    document.getElementById('mycity').src ="Kolkata.jpg";
+                    useImage = 1;
                     break;
                 default:
                     break;
@@ -66,7 +67,7 @@ function selectImage() {
   
 </script>
 <div>
-     <img id="mycity" src="Amaravathi.jpg" height="100" width="100" onclick="selectImage()">
+     <img id="mycity" src="Kolkata.jpg" height="100" width="100" onclick="selectImage()">
 </div>
 </body>
 </html>
