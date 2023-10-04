@@ -32,7 +32,7 @@
     
 </form>
 <button onclick="updateCruise()">Update the cruise</button>
-<p id="cruise_Select_Result"></p>
+<p id="cruise_Choose_Result"></p>
 
 <!-- ------------------------------------------------------------------------------- -->
 
@@ -55,7 +55,7 @@ function updateCruise() {
     my_cruise["days"] = days;
     my_cruise["price"] = price;
 
-    document.getElementById('cruise_Select_Result').innerHTML = JSON.stringify(my_cruise);
+    document.getElementById('cruise_choose_Result').innerHTML = JSON.stringify(my_cruise);
     // document.getElementById('cruise_Select_Result').textContent = `${JSON.stringify(my_cruise)}`;
 }
 </script>
