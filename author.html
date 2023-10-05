@@ -28,6 +28,7 @@
 <script> 
     let good=0;
     let oops=0;
+    let count=0;
 function checkAuthor (){
     
     hidden = document.getElementById("hiddenAuthor").value
@@ -38,12 +39,16 @@ function checkAuthor (){
         good++;
         alert('You got it right')
         out.innerHTML="Results: Good-"+good+", Oops-"+oops
-    } else {
-        oops++
-        alert('Sorry')
-        out.innerHTML="Results: Good-"+good+",Oops-"+oops
+    } 
+    else if (count<7){
+        oops=oops+1
+        count=count+1
+        alert("Sorry")
     }
-    
+    else{
+        alert("Sorry, ran out of guesses.")
+    }
+    out.innerHTML="good count "+good+"  oops count "+oops
 
 }
 
